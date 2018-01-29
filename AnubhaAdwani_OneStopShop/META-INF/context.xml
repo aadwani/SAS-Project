@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/OneStopShop">
+<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/nbad" password="Radhasoami_27" removeAbandoned="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:mysql://assignment2.c6xffumgkjfg.us-west-2.rds.amazonaws.com:3306/nbad?autoReconnect=true" username="aadwani" validationQuery="select 1"/>
+  <CookieProcessor className="org.apache.tomcat.util.http.LegacyCookieProcessor" />
+</Context>
