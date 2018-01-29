@@ -1,0 +1,1043 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+ Role        Level         Count
+
+INPUT      INTERVAL          34   
+TARGET     BINARY             1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Model Events
+
+                                   Number
+                    Measurement      of
+Target     Event       Level       Levels      Order            Label
+
+RESPOND      1        BINARY          2      Descending    response target
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Predicted and decision variables
+
+Type          Variable     Label
+
+TARGET       RESPOND       response target     
+PREDICTED    P_RESPOND1    Predicted: RESPOND=1
+RESIDUAL     R_RESPOND1    Residual: RESPOND=1 
+PREDICTED    P_RESPOND0    Predicted: RESPOND=0
+RESIDUAL     R_RESPOND0    Residual: RESPOND=0 
+FROM         F_RESPOND     From: RESPOND       
+INTO         I_RESPOND     Into: RESPOND       
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+                   Model Information
+
+Training Data Set              WORK.EM_DMREG.VIEW       
+DMDB Catalog                   WORK.REG_DMDB            
+Target Variable                RESPOND (response target)
+Target Measurement Level       Ordinal                  
+Number of Target Categories    2                        
+Error                          MBernoulli               
+Link Function                  Logit                    
+Number of Model Parameters     35                       
+Number of Observations         32235                    
+
+
+          Target Profile
+ 
+ Ordered                     Total
+   Value     RESPOND     Frequency
+
+       1     1                1825
+       2     0               30410
+
+
+
+
+Forward Selection Procedure
+
+
+Step 0: Intercept entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               1
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                  4.28564E-11                                                       
+
+                                            Optimization Results
+
+Iterations                                          0  Function Calls                                      3
+Hessian Calls                                       1  Active Constraints                                  0
+Objective Function                       7012.7727701  Max Abs Gradient Element                  4.28564E-11
+Ridge                                               0  Actual Over Pred Change                             0
+
+Convergence criterion (ABSGCONV=0.00001) satisfied.                                               
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       14025.546         0.0000        0          .    
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -2.8132      0.0241      13625.43        <.0001                       0.060
+
+
+
+
+Step 1: Effect DOLINDET entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               2
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 71.867859078                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             7006       7.1239       212.2         0       0.0341
+   2            0           3              0             6886        120.1     30.0906         0        0.959
+   3            0           4              0             6885       0.6817      0.4119         0        1.005
+   4            0           5              0             6885     0.000057    0.000049         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6884.8691311  Max Abs Gradient Element                 0.0000494343
+Ridge                                               0  Actual Over Pred Change                  1.0000796003
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13769.738       255.8073        1         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -3.0183      0.0282      11492.72        <.0001                       0.049
+DOLINDET       1    0.000840    0.000049        292.00        <.0001          0.1455       1.001
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+DOLINDET              1.001
+
+
+Step 2: Effect TOTORDQ20 entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               3
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 71.867859078                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6959      53.9285       314.0         0        0.166
+   2            0           3              0             6808        151.1     40.3391         0        0.982
+   3            0           4              0             6807       0.8194      0.5819         0        1.007
+   4            0           5              0             6807     0.000115    0.000098         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6806.9221975  Max Abs Gradient Element                 0.0000984447
+Ridge                                               0  Actual Over Pred Change                  1.0001124579
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13613.844       411.7011        2         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -3.0997      0.0296      10992.80        <.0001                       0.045
+DOLINDET       1    0.000686    0.000051        178.55        <.0001          0.1188       1.001
+TOTORDQ20      1      0.5336      0.0412        168.11        <.0001          0.1358       1.705
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+DOLINDET              1.001
+TOTORDQ20             1.705
+
+
+Step 3: Effect DTBUYLST entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               4
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6896        116.5       347.4         0        0.325
+   2            0           3              0             6740        156.0     46.9874         0        0.973
+   3            0           4              0             6739       1.2873      0.8841         0        1.007
+   4            0           5              0             6739     0.000256    0.000229         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6739.0228575  Max Abs Gradient Element                 0.0002287136
+Ridge                                               0  Actual Over Pred Change                  1.0001909401
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13478.046       547.4998        3         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -8.3472      0.5039        274.37        <.0001                       0.000
+DOLINDET       1    0.000594    0.000051        136.87        <.0001          0.1029       1.001
+DTBUYLST       1    0.000315    0.000030        110.86        <.0001          0.2132       1.000
+TOTORDQ20      1      0.3806      0.0425         80.39        <.0001          0.0969       1.463
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+DOLINDET              1.001
+DTBUYLST              1.000
+TOTORDQ20             1.463
+
+
+Step 4: Effect ACTBUY entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               5
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6868        144.9       386.0         0        0.380
+   2            0           3              0             6713        154.9     46.2312         0        0.978
+   3            0           4              0             6712       1.3535      0.9501         0        1.003
+   4            0           5              0             6712     0.000392    0.000286         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6711.6234856  Max Abs Gradient Element                 0.0002862817
+Ridge                                               0  Actual Over Pred Change                  1.0002349005
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13423.247       602.2986        4         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -8.2438      0.5061        265.34        <.0001                       0.000
+ACTBUY         1      0.1572      0.0207         57.54        <.0001          0.1005       1.170
+DOLINDET       1    0.000354    0.000061         34.23        <.0001          0.0613       1.000
+DTBUYLST       1    0.000303    0.000030        100.80        <.0001          0.2046       1.000
+TOTORDQ20      1      0.2932      0.0439         44.64        <.0001          0.0746       1.341
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.170
+DOLINDET              1.000
+DTBUYLST              1.000
+TOTORDQ20             1.341
+
+
+Step 5: Effect TOTORDQ19 entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               6
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6867        145.4       409.3         0        0.362
+   2            0           3              0             6702        165.0     47.3245         0        0.984
+   3            0           4              0             6701       1.2303      0.9032         0        1.004
+   4            0           5              0             6701     0.000331    0.000248         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6701.1272137  Max Abs Gradient Element                 0.0002484248
+Ridge                                               0  Actual Over Pred Change                  1.0002164434
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13402.254       623.2911        5         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -7.8931      0.5064        242.98        <.0001                       0.000
+ACTBUY         1      0.1616      0.0208         60.40        <.0001          0.1034       1.175
+DOLINDET       1    0.000304    0.000062         23.73        <.0001          0.0526       1.000
+DTBUYLST       1    0.000280    0.000030         86.03        <.0001          0.1895       1.000
+TOTORDQ19      1      0.2907      0.0612         22.60        <.0001          0.0491       1.337
+TOTORDQ20      1      0.2915      0.0440         43.95        <.0001          0.0742       1.338
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.175
+DOLINDET              1.000
+DTBUYLST              1.000
+TOTORDQ19             1.337
+TOTORDQ20             1.338
+
+
+Step 6: Effect DOLLARQ22 entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               7
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6873        139.5       430.2         0        0.329
+   2            0           3              0             6693        180.8     48.9598         0        0.990
+   3            0           4              0             6691       1.0361      0.7973         0        1.009
+   4            0           5              0             6691     0.000217    0.000184         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                        6691.498276  Max Abs Gradient Element                 0.0001841244
+Ridge                                               0  Actual Over Pred Change                  1.0001580913
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13382.997       642.5490        6         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -7.5834      0.5042        226.17        <.0001                       0.001
+ACTBUY         1      0.1745      0.0210         68.74        <.0001          0.1116       1.191
+DOLINDET       1    0.000226    0.000066         11.74        0.0006          0.0392       1.000
+DOLLARQ22      1     0.00304    0.000666         20.87        <.0001          0.0417       1.003
+DTBUYLST       1    0.000261    0.000030         74.90        <.0001          0.1764       1.000
+TOTORDQ19      1      0.2949      0.0613         23.17        <.0001          0.0498       1.343
+TOTORDQ20      1      0.2901      0.0442         43.03        <.0001          0.0739       1.337
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.191
+DOLINDET              1.000
+DOLLARQ22             1.003
+DTBUYLST              1.000
+TOTORDQ19             1.343
+TOTORDQ20             1.337
+
+
+Step 7: Effect DOLLARQ18 entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               8
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6881        131.9       447.8         0        0.300
+   2            0           3              0             6685        196.3     50.3839         0        0.983
+   3            0           4              0             6683       1.2103      0.9025         0        1.009
+   4            0           5              0             6683     0.000286    0.000243         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6683.3563085  Max Abs Gradient Element                 0.0002430024
+Ridge                                               0  Actual Over Pred Change                  1.0001825133
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13366.713       658.8329        7         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -7.4156      0.5032        217.21        <.0001                       0.001
+ACTBUY         1      0.1800      0.0211         72.60        <.0001          0.1152       1.197
+DOLINDET       1    0.000162    0.000069          5.53        0.0187          0.0281       1.000
+DOLLARQ18      1     0.00322    0.000754         18.20        <.0001          0.0397       1.003
+DOLLARQ22      1     0.00310    0.000668         21.61        <.0001          0.0425       1.003
+DTBUYLST       1    0.000250    0.000030         69.13        <.0001          0.1692       1.000
+TOTORDQ19      1      0.2846      0.0614         21.51        <.0001          0.0481       1.329
+TOTORDQ20      1      0.2881      0.0442         42.48        <.0001          0.0733       1.334
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.197
+DOLINDET              1.000
+DOLLARQ18             1.003
+DOLLARQ22             1.003
+DTBUYLST              1.000
+TOTORDQ19             1.329
+TOTORDQ20             1.334
+
+
+Step 8: Effect TOTORDQ17 entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               9
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6885        127.4       462.3         0        0.280
+   2            0           3              0             6677        207.9     51.6291         0        0.978
+   3            0           4              0             6676       1.4017      1.0106         0        1.009
+   4            0           5              0             6676     0.000373    0.000316         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6676.0602775  Max Abs Gradient Element                 0.0003161043
+Ridge                                               0  Actual Over Pred Change                  1.0002114351
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13352.121       673.4250        8         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -7.1974      0.5035        204.35        <.0001                       0.001
+ACTBUY         1      0.1811      0.0212         73.03        <.0001          0.1158       1.199
+DOLINDET       1    0.000108    0.000071          2.28        0.1307          0.0187       1.000
+DOLLARQ18      1     0.00316    0.000759         17.31        <.0001          0.0390       1.003
+DOLLARQ22      1     0.00317    0.000668         22.51        <.0001          0.0434       1.003
+DTBUYLST       1    0.000236    0.000030         61.40        <.0001          0.1597       1.000
+TOTORDQ17      1      0.2144      0.0545         15.47        <.0001          0.0425       1.239
+TOTORDQ19      1      0.2717      0.0616         19.44        <.0001          0.0459       1.312
+TOTORDQ20      1      0.2882      0.0444         42.23        <.0001          0.0734       1.334
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.199
+DOLINDET              1.000
+DOLLARQ18             1.003
+DOLLARQ22             1.003
+DTBUYLST              1.000
+TOTORDQ17             1.239
+TOTORDQ19             1.312
+TOTORDQ20             1.334
+
+
+Step 9: Effect DEPT03 entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              10
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6893        120.2       473.7         0        0.256
+   2            0           3              0             6672        220.9     54.1722         0        0.972
+   3            0           4              0             6670       1.7431      1.2003         0        1.010
+   4            0           5              0             6670     0.000550    0.000466         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6669.9053446  Max Abs Gradient Element                 0.0004663013
+Ridge                                               0  Actual Over Pred Change                  1.0002616061
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13339.811       685.7349        9         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -7.1419      0.5038        200.99        <.0001                       0.001
+ACTBUY         1      0.1731      0.0214         65.30        <.0001          0.1107       1.189
+DEPT03         1      0.0247     0.00692         12.70        0.0004          0.0384       1.025
+DOLINDET       1    0.000022    0.000077          0.08        0.7710         0.00386       1.000
+DOLLARQ18      1     0.00313    0.000764         16.74        <.0001          0.0386       1.003
+DOLLARQ22      1     0.00314    0.000669         22.04        <.0001          0.0430       1.003
+DTBUYLST       1    0.000233    0.000030         59.57        <.0001          0.1574       1.000
+TOTORDQ17      1      0.2052      0.0547         14.06        0.0002          0.0406       1.228
+TOTORDQ19      1      0.2571      0.0620         17.19        <.0001          0.0434       1.293
+TOTORDQ20      1      0.2940      0.0444         43.88        <.0001          0.0748       1.342
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.189
+DEPT03                1.025
+DOLINDET              1.000
+DOLLARQ18             1.003
+DOLLARQ22             1.003
+DTBUYLST              1.000
+TOTORDQ17             1.228
+TOTORDQ19             1.293
+TOTORDQ20             1.342
+
+
+Step 10: Effect CCPAYM0 entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              11
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6887        125.4       478.6         0        0.265
+   2            0           3              0             6667        220.5     54.1679         0        0.973
+   3            0           4              0             6665       1.6960      1.1803         0        1.010
+   4            0           5              0             6665     0.000530    0.000450         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6665.1527799  Max Abs Gradient Element                 0.0004502192
+Ridge                                               0  Actual Over Pred Change                  1.0002581977
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13330.306       695.2400       10         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -7.4174      0.5091        212.26        <.0001                       0.001
+ACTBUY         1      0.1643      0.0216         57.78        <.0001          0.1051       1.179
+CCPAYM0        1      0.1577      0.0514          9.43        0.0021          0.0429       1.171
+DEPT03         1      0.0234     0.00693         11.41        0.0007          0.0364       1.024
+DOLINDET       1    0.000028    0.000077          0.14        0.7112         0.00491       1.000
+DOLLARQ18      1     0.00312    0.000766         16.53        <.0001          0.0385       1.003
+DOLLARQ22      1     0.00316    0.000670         22.26        <.0001          0.0433       1.003
+DTBUYLST       1    0.000244    0.000030         65.28        <.0001          0.1652       1.000
+TOTORDQ17      1      0.1985      0.0548         13.13        0.0003          0.0393       1.220
+TOTORDQ19      1      0.2505      0.0620         16.31        <.0001          0.0423       1.285
+TOTORDQ20      1      0.2975      0.0445         44.76        <.0001          0.0757       1.347
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.179
+CCPAYM0               1.171
+DEPT03                1.024
+DOLINDET              1.000
+DOLLARQ18             1.003
+DOLLARQ22             1.003
+DTBUYLST              1.000
+TOTORDQ17             1.220
+TOTORDQ19             1.285
+TOTORDQ20             1.347
+
+
+Step 11: Effect DOLLARQ21 entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              12
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       7012.7727701
+Max Abs Gradient Element                 197.85857134                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             6892        120.4       483.5         0        0.250
+   2            0           3              0             6665        227.8     54.4962         0        0.966
+   3            0           4              0             6663       2.1263      1.3829         0        1.007
+   4            0           5              0             6663      0.00121    0.000874         0        1.001
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       6662.5200254  Max Abs Gradient Element                 0.0008741323
+Ridge                                               0  Actual Over Pred Change                  1.0006547303
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13325.040       700.5055       11         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -7.3142      0.5087        206.70        <.0001                       0.001
+ACTBUY         1      0.1708      0.0218         61.14        <.0001          0.1092       1.186
+CCPAYM0        1      0.1569      0.0514          9.32        0.0023          0.0426       1.170
+DEPT03         1      0.0233     0.00694         11.31        0.0008          0.0363       1.024
+DOLINDET       1    -0.00001    0.000080          0.02        0.8794        -0.00210       1.000
+DOLLARQ18      1     0.00311    0.000769         16.29        <.0001          0.0383       1.003
+DOLLARQ21      1     0.00171    0.000712          5.79        0.0161          0.0229       1.002
+DOLLARQ22      1     0.00306    0.000683         19.99        <.0001          0.0419       1.003
+DTBUYLST       1    0.000238    0.000030         61.88        <.0001          0.1608       1.000
+TOTORDQ17      1      0.1980      0.0548         13.04        0.0003          0.0392       1.219
+TOTORDQ19      1      0.2483      0.0621         15.99        <.0001          0.0420       1.282
+TOTORDQ20      1      0.2946      0.0445         43.73        <.0001          0.0750       1.343
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.186
+CCPAYM0               1.170
+DEPT03                1.024
+DOLINDET              1.000
+DOLLARQ18             1.003
+DOLLARQ21             1.002
+DOLLARQ22             1.003
+DTBUYLST              1.000
+TOTORDQ17             1.219
+TOTORDQ19             1.282
+TOTORDQ20             1.343
+
+
+NOTE: No (additional) effects met the 0.05 significance level for entry into the model.
+
+
+                           Summary of Forward Selection
+ 
+            Effect               Number         Score                  Validation
+    Step    Entered        DF        In    Chi-Square    Pr > ChiSq    Error Rate
+
+       1    DOLINDET        1         1      418.2287        <.0001        6878.3
+       2    TOTORDQ20       1         2      178.2565        <.0001        6847.2
+       3    DTBUYLST        1         3      113.4062        <.0001        6781.3
+       4    ACTBUY          1         4       58.2086        <.0001        6749.4
+       5    TOTORDQ19       1         5       22.9014        <.0001        6747.8
+       6    DOLLARQ22       1         6       23.0478        <.0001        6731.0
+       7    DOLLARQ18       1         7       18.7630        <.0001        6727.0
+       8    TOTORDQ17       1         8       15.5772        <.0001        6724.4
+       9    DEPT03          1         9       12.8139        0.0003        6720.7
+      10    CCPAYM0         1        10        9.4441        0.0021        6727.9
+      11    DOLLARQ21       1        11        5.9594        0.0146        6725.2
+
+
+The selected model, based on the error rate for the validation data, is the model trained in Step 9. It consists of the following effects:
+
+Intercept  ACTBUY  DEPT03  DOLINDET  DOLLARQ18  DOLLARQ22  DTBUYLST  TOTORDQ17  TOTORDQ19  TOTORDQ20  
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+  14025.546       13339.811       685.7349        9         <.0001
+
+
+                            Analysis of Maximum Likelihood Estimates
+ 
+                                Standard          Wald                  Standardized
+Parameter     DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept      1     -7.1419      0.5038        200.99        <.0001                       0.001
+ACTBUY         1      0.1731      0.0214         65.30        <.0001          0.1107       1.189
+DEPT03         1      0.0247     0.00692         12.70        0.0004          0.0384       1.025
+DOLINDET       1    0.000022    0.000077          0.08        0.7710         0.00386       1.000
+DOLLARQ18      1     0.00313    0.000764         16.74        <.0001          0.0386       1.003
+DOLLARQ22      1     0.00314    0.000669         22.04        <.0001          0.0430       1.003
+DTBUYLST       1    0.000233    0.000030         59.57        <.0001          0.1574       1.000
+TOTORDQ17      1      0.2052      0.0547         14.06        0.0002          0.0406       1.228
+TOTORDQ19      1      0.2571      0.0620         17.19        <.0001          0.0434       1.293
+TOTORDQ20      1      0.2940      0.0444         43.88        <.0001          0.0748       1.342
+
+
+   Odds Ratio Estimates
+             
+                      Point
+Effect             Estimate
+
+ACTBUY                1.189
+DEPT03                1.025
+DOLINDET              1.000
+DOLLARQ18             1.003
+DOLLARQ22             1.003
+DTBUYLST              1.000
+TOTORDQ17             1.228
+TOTORDQ19             1.293
+TOTORDQ20             1.342

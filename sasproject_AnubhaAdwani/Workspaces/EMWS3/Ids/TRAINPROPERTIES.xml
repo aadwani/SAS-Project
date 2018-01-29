@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  DataSource="pvank" Scope="LOCAL" Role="RAW" Library="BIA" Table="PVA97NK" NCols="28"
+ NObs="9686" NBytes="2049024" Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N"
+ ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC"
+ ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y"
+ MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y"
+ VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="Y" DsId="pvank"
+ DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="aadwani" DsCreateDate="1828308844.9"
+ DsModifiedBy="aadwani" DsModifyDate="1828308845.1" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT"
+ SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train"
+ Component="DataSource" RawCreateTime="1828308994" CreateTime="07DEC2017:23:36:34"
+ Description="" Data="BIA.PVA97NK" CMeta="WORK.M2N27WUV" RunId="35647f7a-eaa8-464f-9ce0-fdf5d42a927b"
+ RawLastTimeRun="1828309384.7" RawRunTime="5.9069998264" LastTimeRun="07DEC2017:23:43:05"
+ RunTime="0 Hr. 0 Min. 5.91 Sec.">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+</_ROOT_>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  UsePriors="Y" ToolType="UTILITY" DataNeeded="N" PublishCode="PUBLISH" ScoreCodeFormat="DATASTEP"
+ MetaAdvisor="BASIC" ForceRun="N" RunAction="Train" Component="SASCode" RawCreateTime="1828301480.5"
+ CreateTime="07DEC2017:21:31:20" RunId="9bbe436e-0105-4501-a63f-b78fb6529270" RawLastTimeRun="1828301780.1"
+ RawRunTime="4.3440001011" LastTimeRun="07DEC2017:21:36:20" RunTime="0 Hr. 0 Min. 4.34 Sec."
+>
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+USERTRAINCODE
+USERSCORECODE
+USERREPORTCODE
+]]>
+</FILEPROPERTIES></_ROOT_>

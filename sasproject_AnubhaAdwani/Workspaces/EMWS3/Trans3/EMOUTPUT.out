@@ -1,0 +1,41 @@
+*------------------------------------------------------------*
+User:                aadwani
+Date:                December 08, 2017
+Time:                00:41:52
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+INPUT        BINARY             2
+INPUT        INTERVAL          18
+INPUT        NOMINAL            6
+REJECTED     INTERVAL           1
+TARGET       BINARY             1
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+Formula Transformations
+(maximum 500 observations printed)
+ 
+Variable             Measurement
+  Name      Role        Level                                                  Formula
+ 
+  RFM       INPUT     INTERVAL      substr(pctl_GiftTimeLast_REV,1,2)||substr(pctl_GiftCntAll,1,2)||substr(pctl_MonetaryValue,1,2)
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

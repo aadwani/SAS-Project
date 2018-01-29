@@ -1,0 +1,155 @@
+*------------------------------------------------------------*
+User:                aadwani
+Date:                December 08, 2017
+Time:                02:44:47
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+TARGET      BINARY           1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fit Statistics
+Model Selection based on Valid: Misclassification Rate (_VMISC_)
+ 
+                                                      Train:                         Valid:
+                                       Valid:         Average         Train:         Average
+Selected   Model      Model      Misclassification    Squared   Misclassification    Squared
+ Model     Node    Description          Rate           Error           Rate           Error
+ 
+   Y       Tree2   Tree2              0.056262       0.051392        0.055995       0.051990
+           Tree    Tree1              0.056572       0.050832        0.055592       0.052336
+           Reg     Regression         0.056944       0.051845        0.056647       0.052075
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fit Statistics Table
+Target: RESPOND
+ 
+Data Role=Train
+ 
+Statistics                                                          Tree2       Tree        Reg
+ 
+Train: Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff       0.08       0.07       0.06
+Train: Kolmogorov-Smirnov Statistic                                  0.24       0.25       0.24
+Train: Akaike's Information Criterion                                 .          .     13359.81
+Train: Average Squared Error                                         0.05       0.05       0.05
+Train: Roc Index                                                     0.65       0.66       0.66
+Train: Average Error Function                                         .          .         0.21
+Train: Cumulative Percent Captured Response                         25.50      28.45      26.36
+Train: Percent Captured Response                                     9.10      10.82       9.92
+Selection Criterion: Valid: Misclassification Rate                   0.06       0.06       0.06
+Train: Degrees of Freedom for Error                                   .          .     32225.00
+Train: Model Degrees of Freedom                                       .          .        10.00
+Train: Total Degrees of Freedom                                  32235.00   32235.00   32235.00
+Train: Divisor for ASE                                           64470.00   64470.00   64470.00
+Train: Error Function                                                 .          .     13339.81
+Train: Final Prediction Error                                         .          .         0.05
+Train: Gain                                                        154.92     184.47     163.52
+Train: Gini Coefficient                                              0.30       0.33       0.33
+Train: Bin-Based Two-Way Kolmogorov-Smirnov Statistic                0.24       0.25       0.24
+Train: Kolmogorov-Smirnov Probability Cutoff                         0.06       0.06       0.06
+Train: Cumulative Lift                                               2.55       2.84       2.64
+Train: Lift                                                          1.82       2.16       1.98
+Train: Maximum Absolute Error                                        0.96       0.97       0.99
+Train: Misclassification Rate                                        0.06       0.06       0.06
+Train: Mean Square Error                                              .          .         0.05
+Train: Sum of Frequencies                                        32235.00   32235.00   32235.00
+Train: Number of Estimate Weights                                     .          .        10.00
+Train: Root Average Squared Error                                    0.23       0.23       0.23
+Train: Cumulative Percent Response                                  14.43      16.11      14.92
+Train: Percent Response                                             10.31      12.25      11.23
+Train: Root Final Prediction Error                                    .          .         0.23
+Train: Root Mean Squared Error                                        .          .         0.23
+Train: Schwarz's Bayesian Criterion                                   .          .     13443.62
+Train: Sum of Squared Errors                                      3313.26    3277.12    3342.42
+Train: Sum of Case Weights Times Freq                                 .          .     64470.00
+ 
+ 
+Data Role=Valid
+ 
+Statistics                                                          Tree2       Tree        Reg
+ 
+Valid: Kolmogorov-Smirnov Statistic                                  0.22       0.21       0.21
+Valid: Average Squared Error                                         0.05       0.05       0.05
+Valid: Roc Index                                                     0.64       0.64       0.65
+Valid: Average Error Function                                         .          .         0.21
+Valid: Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff       0.05       0.07       0.06
+Valid: Cumulative Percent Captured Response                         24.16      23.85      25.71
+Valid: Percent Captured Response                                     8.53      10.04       8.75
+Valid: Divisor for VASE                                          32242.00   32242.00   32242.00
+Valid: Error Function                                                 .          .      6720.68
+Valid: Gain                                                        141.49     138.40     156.97
+Valid: Gini Coefficient                                              0.28       0.28       0.30
+Valid: Bin-Based Two-Way Kolmogorov-Smirnov Statistic                0.22       0.21       0.21
+Valid: Kolmogorov-Smirnov Probability Cutoff                         0.04       0.06       0.06
+Valid: Cumulative Lift                                               2.41       2.38       2.57
+Valid: Lift                                                          1.71       2.01       1.75
+Valid: Maximum Absolute Error                                        0.96       0.97       0.99
+Valid: Misclassification Rate                                        0.06       0.06       0.06
+Valid: Mean Square Error                                              .          .         0.05
+Valid: Sum of Frequencies                                        16121.00   16121.00   16121.00
+Valid: Root Average Squared Error                                    0.23       0.23       0.23
+Valid: Cumulative Percent Response                                  13.69      13.52      14.57
+Valid: Percent Response                                              9.67      11.39       9.93
+Valid: Root Mean Square Error                                         .          .         0.23
+Valid: Sum of Squared Errors                                      1676.25    1687.41    1678.99
+Valid: Sum of Case Weights Times Freq                                 .          .     32242.00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Event Classification Table
+Model Selection based on Valid: Misclassification Rate (_VMISC_)
+ 
+Model     Model     Data                                  False     True      False     True
+Node   Description  Role      Target    Target Label    Negative  Negative  Positive  Positive
+ 
+Tree2  Tree2        TRAIN     RESPOND  response target    1804      30409       1        21
+Tree2  Tree2        VALIDATE  RESPOND  response target     907      15207       .         7
+Tree   Tree1        TRAIN     RESPOND  response target    1773      30391      19        52
+Tree   Tree1        VALIDATE  RESPOND  response target     902      15197      10        12
+Reg    Regression   TRAIN     RESPOND  response target    1809      30393      17        16
+Reg    Regression   VALIDATE  RESPOND  response target     907      15196      11         7
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
